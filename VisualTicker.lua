@@ -10,7 +10,7 @@ function VisualTicker:initialize(aCount, aLabel)
     self.height = self.labelText:getHeight() * 2.5
 end
 
-function VisualTicker:drawCenter(x, y)
+function VisualTicker:drawCentered(x, y)
     love.graphics.draw(self.countText, x - self.countText:getWidth()/2, y)
     love.graphics.draw(self.labelText, x - self.labelText:getWidth()/2, y + self.labelText:getHeight() * 1.5)
 end
