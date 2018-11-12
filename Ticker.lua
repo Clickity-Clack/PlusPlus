@@ -1,3 +1,4 @@
+local utf8 = require "utf8"
 local Ticker = class('Ticker')
 
 function Ticker:initialize(aCount, aLabel)
