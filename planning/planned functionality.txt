@@ -1,0 +1,5 @@
+-Add counters, resize window accordingly
+-Switch between counters using number keys
+-Modify labels
+-Remove counters (if I'm feeling frisky)
+-Output to JSON (if I get reeeeally bored. Maybe use a serialization library?)
