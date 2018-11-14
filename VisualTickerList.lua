@@ -21,7 +21,7 @@ function VisualTickerList:drawCentered(x, y)
 end
 
 function VisualTickerList:getHeight()
-    return #self.tickers 
+    return #self.tickers * (selectedTicker:getHeight() + bufferHeight) + bufferHeight
 end
 
 function VisualTickerList:incrementSelected()
@@ -46,6 +46,14 @@ end
 
 function VisualTickerList:addTicker()
     
+end
+
+function VisualTickerList:getSummary()
+    local summary = {}
+    for i in pairs(self.tickers) do
+        table.insert(summary, self.tickers[i]:getSummary())
+    end
+    return summary
 end
 
 return VisualTickerList

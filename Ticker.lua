@@ -33,4 +33,11 @@ function Ticker:backspace(key)
     end
 end
 
+function Ticker:getSummary()
+    local summary = {}
+    summary.count = self.count
+    summary.label = self.label
+    return summary
+end
+
 return Ticker
