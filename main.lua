@@ -44,8 +44,8 @@ function love.textinput(text)
 end
 
 function save()
-    print('this doesn\'t do anything yet')
-    -- return tickerList:getSummary()
+    local out = json.encode(tickerList:getSummary())
+    love.filesystem.write('saveFile.json', out)
 end
 
 function open()
