@@ -8,7 +8,7 @@ function SaveDisplay:initialize(manager)
     self.promptText = love.graphics.newText(love.graphics.getFont(),'Save as:')
     self.fileName = ''
     self.nameText = love.graphics.newText(love.graphics.getFont(),fileName)
-    self.confirmText = love.graphics.newText(love.graphics.getFont(), 'O: Overwrite\nA: Append\nC: Cancel')
+    self.confirmText = love.graphics.newText(love.graphics.getFont(), 'O: Overwrite\nC: Cancel')
     self.confirming = false
 end
 
@@ -41,7 +41,7 @@ function SaveDisplay:keypressed(key)
         if key == 'return' then
             if self:checkValid(self.fileName) then
                 if love.filesystem.getInfo(self.fileName .. '.json') ~= nil then
-                    self.promptText:set('File with that name already exists.\n Overwrite? Append? Cancel?')
+                    self.promptText:set('File with that name already exists.\n Overwrite or Cancel?')
                     self.confirming = true
                 else
                     self:write()
