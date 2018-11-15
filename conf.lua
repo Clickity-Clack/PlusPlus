@@ -1,5 +1,5 @@
 function love.conf(t)
-	t.console = true
+	--t.console = true
     t.window.width = 250
     t.window.height = 100
     t.modules.audio = false
@@ -9,4 +9,5 @@ function love.conf(t)
     t.modules.sound = false
     t.modules.touch = false
     t.modules.video = false
+    t.version = "11.0"
 end

@@ -9,6 +9,7 @@ function VisualTickerList:initialize()
 end
 
 function VisualTickerList:drawCentered(x, y)
+    love.graphics.setColor(0.4, 0.4, 0.4)
     local relativeToSelected
     for i in pairs(self.tickers) do
         relativeToSelected = i - self.selectedTicker
