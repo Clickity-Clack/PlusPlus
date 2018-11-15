@@ -1,4 +1,2 @@
--Add counters, resize window accordingly
--Switch between counters using number keys
 -Remove counters (if I'm feeling frisky)
--Output to JSON (if I get reeeeally bored. Maybe use a serialization library?)
+-Specify a file name and warn if file already exists

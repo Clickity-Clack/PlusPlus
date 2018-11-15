@@ -5,8 +5,10 @@ local VisualTickerList = require 'VisualTickerList'
 local once
 local bufferHeight
 local winWidth
+local winHeight
 
 local tickers
+local lastKey
 
 function love.load()
     love.window.setTitle("PlusPlus")
@@ -18,23 +20,28 @@ function love.load()
 
     once = true
     winWidth = love.graphics.getWidth()
+    winHeight = love.graphics.getHeight()
 end
 
 function love.draw()
-    tickerList:drawCentered(winWidth/2, 0)
+    tickerList:drawCentered(winWidth/2, winHeight/2)
 end
 
 function love.keypressed(key)
     if input then 
         if key == 'backspace' then tickerList:backspace() end
         if key == 'return' then input = false end
-    elseif key == 'kp+' then tickerList:incrementSelected()
-    elseif key == 'kp-' then tickerList:decrementSelected()
+    elseif key == 'kp+' or key == '+' or key == '.' then tickerList:incrementSelected()
+    elseif key == 'kp-' or key == '-' or key == ',' then tickerList:decrementSelected()
     elseif key == 'escape' then tickerList:clearSelected()
+    elseif key == 'n' then tickerList:addTicker()
+    elseif key == 'down' then tickerList:selectNext()
+    elseif key == 'up' then tickerList:selectPrevious()
     elseif key == 'l' then input = true
     elseif key == 's' then save()
     elseif key == 'o' then open()
     elseif key == 'q' then love.event.quit() end
+    lastKey = key
 end
 
 function love.textinput(text)

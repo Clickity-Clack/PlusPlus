@@ -1,7 +1,7 @@
 function love.conf(t)
 	t.console = true
     t.window.width = 250
-    t.window.height = 70
+    t.window.height = 100
     t.modules.audio = false
     t.modules.joystick = false
     t.modules.mouse = false
