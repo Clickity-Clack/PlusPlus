@@ -1,0 +1,4 @@
+--Check to see if the ticker has been modified, Ask whether to save first if so
+--Grab list of files in the directory with .json extension
+--Display list as selectable
+--Return filename or new table???

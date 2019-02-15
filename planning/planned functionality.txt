@@ -1,1 +1,2 @@
 -Remove counters (if I'm feeling frisky)
+-Open a compatible JSON file
