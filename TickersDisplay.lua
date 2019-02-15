@@ -1,12 +1,13 @@
 local TickersDisplay = class('TickersDisplay')
 local VisualTickerList = require 'VisualTickerList'
+local VisualTicker = require 'VisualTicker'
 winWidth = love.graphics.getWidth()
 winHeight = love.graphics.getHeight()
 
 function TickersDisplay:initialize(aManager)
     self.manager = aManager
     self.input = false
-    self.tickerList = VisualTickerList()
+    self.tickerList = VisualTickerList({VisualTicker()})
 end
 
 function TickersDisplay:draw()
