@@ -33,4 +33,8 @@ function DisplayManager:textinput(text)
     self.currentDisplay:textinput(text)
 end
 
+function DisplayManager:Prompt(question, responses)
+    
+end
+
 return DisplayManager
